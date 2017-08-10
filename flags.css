@@ -1,0 +1,252 @@
+
+
+
+body { /* the body method */
+background: #C7C1C1;/* makes background grey */
+text-align: left; /* Alignes all text to the left */
+/* Padding and Margin are being reset below. This was done so that the browser padding and margin is reset to 0 to make it all equal.  */
+padding: 0; 
+margin:0;
+
+}
+
+
+#bar{ /* This Bar is a div, it's used to add margin and padding (as well as float) to the navigation bar. The padding and margin is added as it was
+previously reset */
+float:right;
+margin-bottom:10px;
+padding:5px;
+}
+
+/* The following idea to make the navigation bar was taken from "http://csswizardry.com/2011/02/creating-a-pure-css-dropdown-menu/".
+*************************************************************************************************************************************
+ */
+#nav{ /* This is used to give some style and positioning to the overall navigation bar */
+    list-style:none;  /* Deletes the list-like look. */
+    font-weight:bold;
+    position: relative; /* Clears floats */
+    width:100%;  
+	/*Top and Right are used to place the navigation bar in a specific place  */
+	top: -144px; 
+	right: -9px;
+}
+
+#nav li{ /* Sets up the list element */
+float:left; /* floats the list items to the left  */
+margin-right:10px; 
+position:relative; /* positions the elements relative to each other.  */ 
+
+}
+
+#nav a{ /* this is to edit the looks of the anchor elements.  */
+font-size: 12pt;
+display:block;
+color:#ABABB5; /* Blue text colour. */ 
+background:#5D2C2C;/**/
+text-decoration:none;
+}
+#nav a:hover{
+   /* color: #828291;*/
+    background:#5D2C2C;
+    /*text-decoration:underline;*/
+	
+}
+
+/*--- DROPDOWN ---*/
+#nav ul{
+   background:#5D2C2C; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+   /* background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    list-style: none;
+    position: absolute;
+    left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+
+#nav ul li{
+   /* padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+    float: none;
+	right: 37px;
+	list-style: none;
+}
+#nav ul a{
+    white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+#nav li:hover ul{ /* Displays the dropdown when you hover over the elements.*/
+    left:0; /* Bring back on-screen when needed */
+}
+
+#nav li:hover ul a{ /* There is a global style for links before they are hovered. This code will take those effect off.*/
+    text-decoration:none;
+}
+/********** End of navigation bar code. ********** */
+
+#flagTitle{
+background-image: url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc1026/flags/css/30-dark-red.png");
+background-repeat: repeat-x; /* repeats the image added horizontally making it look like a single horizontal line. */
+padding: 3px;	
+padding-top: 55px; /* adds space between title and red line. */
+padding-left: 20px; /* adds the spacing on the left of the Flags H1. */ 
+}
+
+h1:before{ /* adding the flags image. Using the :before adds the image before the actual h1 content.*/
+content: url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc1026/flags/css/70-flags.png");
+/* This part of the method positions the image */
+position: absolute;
+right: 195px;
+top: 80px;
+}
+
+h1{ /* Adds text and it edits it. */
+text-align: left;
+font-family: "Lucida Sans Unicode";
+color: #8F8888;
+padding-top: 5px;
+
+}
+
+h2:before{
+/* Adds bullet point before every actual h2 content */
+content: url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc1026/flags/css/20x12-dkgrey.png");
+text-align: left;
+font-family: "Lucida Sans Unicode";
+color: #8F8888;
+/* adds padding */
+padding: 5px;
+}
+
+h2{ /* makes all h2 text have their own look */
+text-align: left;
+font-family: "Lucida Sans Unicode";
+color: #8F8888;
+/* adds padding */
+padding: 5px;
+}
+
+
+h3:before{
+/* Adds bullet point image before every actual h3 content. */
+content: url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc1026/flags/css/20x8-dkgrey.png");
+/* adds padding */
+padding: 5px;
+text-align: left;
+}
+
+h3{/* makes all h3 text have their own look */
+text-align: left;
+font-family: "Lucida Sans Unicode";
+color: #8F8888;
+/* adds padding */
+padding: 5px;
+}
+
+#Introduction, #Maritime_Letters, #Maritime_Numbers{
+/*  add border top to make it look like there is an hr as there was no hr above introduction, maritime letters and maritime numbers. */
+border-top: 12px solid #5D2C2C;
+}
+
+p { /* paragraph styling*/
+/* makes everything wrapped up in a <p> have the same font, size, text align, padding and margin. */
+font-family:"Palatino Linotype";
+font-size: 12pt;
+text-align: left;
+padding: 5px;
+margin: 5px;
+}
+
+hr{ /* hr looks. */
+border: solid 1px #5D2C2C;
+height: 10px;
+width: auto;
+height: 10px;
+background-color: #5D2C2C;
+}
+
+#NatFlag:before{ /* :before selector used to select image before selecting actual content. */
+content:url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc1026/flags/css/3-flags75.png");
+float: right;
+
+}
+
+
+#youtube{  /* YouTube positioning and addition of text size, font and margin and padding have been added here.  */
+float: right;
+padding: 25px;
+text-align: center;
+font-family:"Palatino Linotype";
+font-size: 12pt;
+margin-left: 10px;
+background-image: url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc1026/flags/css/460x320-box.png ");  /* Grey box that goes around it.  */
+background-repeat: no-repeat;
+background-position: 0px 10px;
+
+
+}
+
+#content{ /* Stores content of the website. Its the white box.  */
+background-color: white;
+max-width: 960px; /* max width is 960 as specified in the specification */
+min-width: 450px;  /*  min width is 450 as specified in the specification */
+height: auto;  /* height is set automatic so that it gets the right size for the content to fit in.  */
+margin: 25px auto; /* margin is used to centre content in the page. */
+}
+
+
+
+#flickriver{/* flickriver positioning + padding and grey box that goes around. */
+float: right;
+padding: 25px;
+background-image: url("https://internal.cs.ncl.ac.uk/modules/2013-14/csc1026/flags/css/420x370-box.png");
+background-repeat: no-repeat;
+margin-left: 15px;
+
+}
+
+
+/* flags */
+
+.flags{  /* This sets the float, padding and margin as well as adjusting font properties.
+This is a paragraph class. It sets the specific <p> selected to the font size and variant specified below. */
+float: left;
+padding: 7px;
+margin: 5px;
+font-variant: small-caps;  /* Makes the letters become capitals and capital letters are bigger.  */
+font-weight: bold;
+}
+
+.flags img {
+/*  This takes care of the border */
+border-style: solid;
+border-width: 1px;
+}
+
+
+
+.nflag{ /* This sets the float, padding and margin as well as adjusting font properties.
+This is a paragraph class. It sets the specific <p> selected to the font size and variant specified below. */
+float: left;
+padding: 7px;
+margin: 5px;
+font-variant: small-caps; /* Makes the letters become capitals and capital letters are bigger.  */
+font-weight: bold;
+}
+
+
+
+#Letters, #numbers{
+/* Clears Divs to put flags in correct order. */
+clear: both;
+overflow: auto; /* make sure it doesn't overflow. */
+}
+
+
+#last{  /*clears the last div of the page. (wiki is in this div.) */
+clear:both;
+}
+
+#wiki{
+/* the <p> selected will have the following properties. */
+font-family:"Palatino Linotype";
+font-size: 10pt;
+text-align: right;
+margin-top: -7px;
+padding: 15px;
+}
